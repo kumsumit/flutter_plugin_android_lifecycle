@@ -40,8 +40,10 @@ tasks.register("clean", Delete) {
 // builds with).
 gradle.projectsEvaluated {
     project(":flutter_plugin_android_lifecycle") {
-        tasks.withType(JavaCompile) {
-            options.compilerArgs << "-Xlint:all" << "-Werror"
+        tasks.withType(JavaCompile).tap {
+            configureEach {
+                options.compilerArgs << "-Xlint:all" << "-Werror"
+            }
         }
     }
 }
