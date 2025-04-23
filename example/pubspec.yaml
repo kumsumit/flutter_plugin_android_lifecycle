@@ -3,8 +3,18 @@ description: Demonstrates how to use the flutter_plugin_android_lifecycle plugin
 publish_to: none
 
 environment:
+<<<<<<< HEAD
+<<<<<<< HEAD
   sdk: ">=3.3.1 <4.0.0"
   flutter: ">=3.19.3"
+=======
+  sdk: ^3.4.0
+  flutter: ">=3.22.0"
+>>>>>>> refs/remotes/origin/main
+=======
+  sdk: ^3.5.0
+  flutter: ">=3.24.0"
+>>>>>>> refs/remotes/origin/main
 
 dependencies:
   flutter:
