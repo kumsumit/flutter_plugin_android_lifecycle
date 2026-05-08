@@ -9,9 +9,9 @@ group = "io.flutter.plugins.flutter_plugin_android_lifecycle"
 version = "1.0"
 
 repositories {
-        google()
-        mavenCentral()
-    }
+    google()
+    mavenCentral()
+}
 
 android {
     namespace = "io.flutter.plugins.flutter_plugin_android_lifecycle"
@@ -19,7 +19,7 @@ android {
 
     defaultConfig {
         minSdk = 24
-        consumerProguardFiles = files('proguard.txt')
+        consumerProguardFiles(files("proguard.txt"))
     }
 
     compileOptions {
@@ -27,14 +27,25 @@ android {
         targetCompatibility = JavaVersion.VERSION_21
     }
 
-    lintOptions {
+    lint {
         checkAllWarnings = true
         warningsAsErrors = true
-        disable = setOf('AndroidGradlePluginVersion', 'InvalidPackage', 'GradleDependency', 'NewerVersionAvailable')
+
+        disable += setOf(
+            "AndroidGradlePluginVersion",
+            "InvalidPackage",
+            "GradleDependency",
+            "NewerVersionAvailable"
+        )
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_21)
     }
 }
 
 dependencies {
-        implementation("androidx.annotation:annotation:1.10.0")
-    }
-
+    implementation("androidx.annotation:annotation:1.10.0")
+}
