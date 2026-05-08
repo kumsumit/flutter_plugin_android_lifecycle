@@ -19,7 +19,7 @@ android {
 
     defaultConfig {
         minSdk = 24
-        consumerProguardFiles(files("proguard.txt"))
+        consumerProguardFiles("proguard.txt")
     }
 
     compileOptions {
