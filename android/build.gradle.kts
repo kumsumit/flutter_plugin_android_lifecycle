@@ -1,5 +1,6 @@
 plugins {
     id("com.android.library")
+    id("org.jetbrains.kotlin.android") version "2.3.21"
 }
 
 group = "io.flutter.plugins.flutter_plugin_android_lifecycle"
